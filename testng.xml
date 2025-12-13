@@ -1,0 +1,12 @@
+<suite name="selenium">
+    <test name="browser">
+        <classes>
+            <class>
+                <name>browsers.ChromeTest</name>
+                <methods>
+                    <include name="headlessMode"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
