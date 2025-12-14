@@ -55,6 +55,16 @@ public class ChromeTest {
         Assert.assertEquals(driver.getTitle(),"Selenium");
         //driver.quit();
     }
+    @Test
+    void openBrowserWithBetaVersion(){
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setBrowserVersion("132");
+
+        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver.get("https://www.selenium.dev/");
+        Assert.assertEquals(driver.getTitle(),"Selenium");
+        driver.quit();
+    }
 
     //@Test
 //    void openBrowserWithOldVersion(){
