@@ -27,10 +27,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-        cache-dependency-path: pom.xml
+
 
     - name: Run Selenium Tests
-      working-directory: selenium-java
       run: mvn test
 
 
