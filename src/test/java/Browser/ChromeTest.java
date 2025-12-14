@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +13,7 @@ import java.util.Map;
 public class ChromeTest {
     @Test
     void defaultMode(){
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/");
         Assert.assertEquals(driver.getTitle(),"Selenium");
@@ -24,6 +26,7 @@ public class ChromeTest {
 
     @Test
     void headlessMode(){
+        WebDriverManager.chromedriver().setup();
         // Arrange
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
@@ -37,6 +40,7 @@ public class ChromeTest {
     }
     @Test
     void openBrowserWithMobileViewMode(){
+        WebDriverManager.chromedriver().setup();
         Map<String, Object> deviceMetrics = new HashMap<>();
         deviceMetrics.put("width", 344);
         deviceMetrics.put("height", 882);
@@ -83,7 +87,6 @@ public class ChromeTest {
 //
 //        driver.quit();
 //    }
-//
 //    @Test
 //    void interceptionNetwork(){
 //        WebDriver driver = new ChromeDriver();
