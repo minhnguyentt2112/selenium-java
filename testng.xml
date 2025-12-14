@@ -1,12 +1,9 @@
-<suite name="selenium">
-    <test name="browser">
-        <classes>
-            <class>
-                <name>browsers.ChromeTest</name>
-                <methods>
-                    <include name="headlessMode"/>
-                </methods>
-            </class>
-        </classes>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Suite">
+    <test name="All Browser Tests">
+        <packages>
+            <package name="Browser"/>
+        </packages>
     </test>
 </suite>
