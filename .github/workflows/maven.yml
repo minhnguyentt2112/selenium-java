@@ -15,6 +15,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
+permissions:
+  id-token: write
+  contents: read
+  checks: write
+
 jobs:
   build:
 
@@ -30,3 +36,11 @@ jobs:
         cache: maven
     - name: Run Selenium Tests
       run: mvn test
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure()
+      with:
+        name: Test Results
+        path: ${{ github.workspace }}/target/surefire-reports/TEST-*.xml
+        reporter: java-junit
