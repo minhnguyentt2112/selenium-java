@@ -3,7 +3,7 @@
 <suite name="Selenium Test Suite">
     <test name="All Browser Tests">
         <packages>
-            <package name="Browser"/>
+            <package name="herokuApp.LoginTest"/>
         </packages>
     </test>
 </suite>
