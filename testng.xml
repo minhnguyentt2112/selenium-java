@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Selenium Test Suite">
-    <test name="All Browser Tests">
-        <packages>
-            <package name="herokuApp.LoginTest"/>
-        </packages>
+<suite name="selenium">
+    <test name="browser">
+        <classes>
+            <class name="herokuApp.LoginTest"/>
+            <class name="bowsers.ChromeTest">
+                <methods>
+                    <include name="headlessMode"/>
+                </methods>
+            </class>
+        </classes>
     </test>
 </suite>
