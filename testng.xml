@@ -2,6 +2,9 @@
     <test name="browser">
         <classes>
             <class name="herokuApp.LoginTest"/>
+            <class name="herokuApp.CheckboxesTest"/>
+            <class name="herokuApp.DropdownTest"/>
+            <class name="herokuApp.HyperlinkTest"/>
             <class name="bowsers.ChromeTest">
                 <methods>
                     <include name="headlessMode"/>
